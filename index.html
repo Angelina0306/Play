@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper header__wrapper">
+        <h1 class="header__heading">
+          Добро пожаловать <br />на мой сайт мини-игр
+        </h1>
+        <p class="header__text">
+          Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
+          <b>«Поехали!»</b> и <b>приступай</b>.
+        </p>
+        <a href="#" class="btn header__btn">Поехали!</a>
+      </div>
+      <marquee class="marquee" behavior="scroll" direction="left" loop="-1">
+          <div class="roll">
+            <p class="roll__text">Викторина</p>
+          <img class="roll__img" src="./img/Star_13.svg" alt="" />
+           <p class="roll__text">Угадай число</p>
+          <img class="roll__img" src="./img/Star_13.svg" alt="" />
+           <p class="roll__text">Переверни текст</p>
+          <img class="roll__img" src="./img/Star_13.svg" alt="" />
+           <p class="roll__text">Простая арифметика</p>
+          <img class="roll__img" src="./img/Star_13.svg" alt="" />
+           <p class="roll__text">Камень, ножницы, бумага</p>
+          <img class="roll__img" src="./img/Star_13.svg" alt="" />
+           <p class="roll__text">Генератор случайных цветов</p>
+          <img class="roll__img" src="./img/Star_13.svg" alt="" />
+          </div>
+        </marquee>
+    </header>
+    <main class="main">
+      <section class="inform">
+        <div class="wrapper inform__wrapper">
+          <h1 id="inform__heading" class="inform__heading">Об играх</h1>
+          <p class="inform__text">
+            В моей коллекции представлено 6 игр на разные темы. Игры несложные —
+            в них может поиграть каждый. <br />
+            Все игры доступны для пользования.
+          </p>
+          <div class=" cart__list">
+            <div class="cart__col">
+              <div class="cart cart__1">
+                <img src="./img/card1.png" alt="" class="cart__img" />
+                <div class="cart__body">
+                  <button class="cart__btn">Игра № 1</button>
+                <h2 class="cart__h2">Угадай число</h2>
+                </div>
+              </div>
+              <div class="cart cart__4">
+                <img src="./img/card4.png" alt="" class="cart__img" />
+                <div class="cart__body">
+                  <button class="cart__btn">Игра № 4</button>
+                <h2 class="cart__h2">Камень, ножницы, бумага</h2>
+                </div>
+              </div>
+            </div>
+            <div class="cart__col">
+              <div class="cart cart__2">
+                <img src="./img/card2.png" alt="" class="cart__img" />
+                <div class="cart__body">
+                  <button class="cart__btn">Игра № 2</button>
+                <h2 class="cart__h2">Простая арифметика</h2>
+                </div>
+              </div>
+              <div class="cart cart__5">
+                <img src="./img/card5.png" alt="" class="cart__img" />
+                <div class="cart__body">
+                  <button class="cart__btn">Игра № 5</button>
+                <h2 class="cart__h2">Простая викторина</h2>
+                </div>
+              </div>
+            </div>
+            <div class="cart__col">
+              <div class="cart cart__3">
+                <img src="./img/card3.png" alt="" class="cart__img" />
+                <div class="cart__body">
+                  <button class="cart__btn">Игра № 3</button>
+                <h2 class="cart__h2">Переверни текст</h2>
+                </div>
+              </div>
+              <div class="cart cart__6">
+                <img src="./img/card6.png" alt="" class="cart__img" />
+               <div class="cart__body">
+                 <button class="cart__btn">Игра № 6</button>
+                <h2 class="cart__h2">Генератор случайных цветов</h2>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="play">
+        <div class="wrapper play__wrapper">
+           <h1 class="inform__heading_2">Мини-игры</h1>
+        </div>
+      </section>
+    </main>
+    <script src="./skript.js"></script>
+  </body>
+</html>

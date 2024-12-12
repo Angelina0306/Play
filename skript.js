@@ -1,63 +1,63 @@
-a = 10;
-alert(a);
-a = 20;
-alert(a);
-a = "Год выпуска первого Iphone 2007";
-alert(a);
-a = "Брендан Эйх создатель Java Skrip";
-alert(a);
+// a = 10;
+// alert(a);
+// b = 20;
+// alert(b);
+// c = "Год выпуска первого Iphone 2007";
+// alert(c);
+// d = "Брендан Эйх создатель Java Skrip";
+// alert(d);
 
-let a = 10;
-let b = 2;
-alert(a + b);
-alert(a - b);
-alert(a / b);
-alert(a * b);
+// let f = 10;
+// let e = 2;
+// alert(f + e);
+// alert(f - e);
+// alert(f / e);
+// alert(f * e);
 
-let result = 2 ** 5;
-alert(result);
+// let result = 2 ** 5;
+// alert(result);
 
-let a = 9;
-let b = 2;
-console.log(a % b);
+// let ab = 9;
+// let bc = 2;
+// console.log(ab % bc);
  
-let age = prompt(
- "Сколько вам лет?", 18);
-alert(age);
+// let age = prompt(
+//  "Сколько вам лет?", 18);
+// alert(age);
 
-let user = {
-  name: "Амина",
-  age: 2,
-  isAdmin: true,
-};
-
-
-console.log(`Привет, ${name}!`);
+// let user = {
+//   name: "Амина",
+//   age1: 2,
+//   isAdmin: true,
+// };
 
 
-let num = 1;
-num += 5;
-num -=  3;
-num *= 7;
-num /= 3;
-num++;
-num--;
-alert(num);
+// console.log(`Привет, ${name}!`);
 
-let password = "7580";
-let result = prompt("Введите пароль", "");
-if (result == password) alert("Пароль введён верно");
-else alert("Пароль введен неправильно");
 
-let d = 7 ;
-let e = 111;
+// let num = 1;
+// num += 5;
+// num -=  3;
+// num *= 7;
+// num /= 3;
+// num++;
+// num--;
+// alert(num);
 
-if (d > 100 || e > 100) {
-  console.log("Верно");
-} else {
-  console.log("Неверно");
-}
+// let password = "7580";
+// let result1 = prompt("Введите пароль", "");
+// if (result1 == password) alert("Пароль введён верно");
+// else alert("Пароль введен неправильно");
 
-let a = "2";
-let b = "3";
-alert(Number(a) + Number(b));
+// let dc = 7 ;
+// let ef = 111;
+
+// if (dc > 100 || ef > 100) {
+//   console.log("Верно");
+// } else {
+//   console.log("Неверно");
+// }
+
+// let h = "2";
+// let g = "3";
+// alert(Number(h) + Number(g));

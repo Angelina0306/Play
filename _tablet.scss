@@ -16,9 +16,16 @@
     min-height: 624.09px;
     height: fit-content;
   }
+
+  .play {
+    flex-direction: column-reverse;
+    &:nth-child(even) {
+      flex-direction: column;
+    }
+  }
 }
 
-@media (max-width:920px) {
+@media (max-width: 920px) {
   div.cart {
     min-height: 584.09px;
   }

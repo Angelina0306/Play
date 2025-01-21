@@ -11,9 +11,9 @@ function playgame() {
   let num = prompt("Введите число");
   while (num != randomNumber) {
     if (num > randomNumber) {
-      console.log(`${num} больше загаданного`);
+      alert(`${num} больше загаданного`);
     } else {
-      console.log(`${num} меньше загаданного`);
+      alert(`${num} меньше загаданного`);
     }
     num = prompt("Введите число");
   }

@@ -330,7 +330,7 @@ body {
 }
 
 .play__img {
-  width: 600px;
+  width: 100%;
   height: 500px;
 }
 
@@ -370,11 +370,14 @@ body {
   background: rgb(32, 32, 39);
   padding: 16px 28px;
 
-  .active,
-  .play__btn :hover {
+  &:hover {
     color: black;
     background: white;
   }
+}
+
+.name {
+  text-decoration: none;
 }
 
 .footer {
@@ -552,6 +555,10 @@ body {
 
   .play {
     flex-direction: column-reverse;
+  }
+
+  .play__img {
+    max-width: unset;
   }
 
   .play:nth-child(even) {

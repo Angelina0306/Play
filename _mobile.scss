@@ -91,8 +91,6 @@
     line-height: 48.76px;
     margin: 48px 0;
   }
-
-  
 }
 
 @media (max-width: 1024px) {
@@ -116,6 +114,9 @@
   }
   .play {
     flex-direction: column-reverse;
+  }
+  .play__img {
+    max-width: unset;
   }
   .play:nth-child(even) {
     flex-direction: column;
@@ -158,8 +159,10 @@
 @media (max-width: 525px) {
   .header {
     padding-top: 147px;
-    background-image: url(./img/small_star.svg), url(./img/Star_3.svg), url(./img/Star_2.svg), url(./img/Star_4.svg), url(./img/Star_5.svg);
-    background-position: top right, top 64px left 91px, left 37px top 97px, bottom 79px right 34px, bottom 74px right 86px;
+    background-image: url(./img/small_star.svg), url(./img/Star_3.svg),
+      url(./img/Star_2.svg), url(./img/Star_4.svg), url(./img/Star_5.svg);
+    background-position: top right, top 64px left 91px, left 37px top 97px,
+      bottom 79px right 34px, bottom 74px right 86px;
     background-size: auto, 21px 21px, 35px 35px, 39px 41px, 18px 18px;
     background-repeat: no-repeat;
   }

@@ -90,36 +90,78 @@ function playgame3() {
   console.log("Перевёрнутый текст: " + reverseString(userText));
 }
 function playgame4() {
- 
-const quiz = [
-  {
-    question: "Какой цвет небо?",
-    options: ["1. Красный", "2. Синий", "3. Зеленый"],
-    correctAnswer: 2, 
-  },
-  {
-    question: "Сколько дней в неделе?",
-    options: ["1. Шесть", "2. Семь", "3. Восемь"],
-    correctAnswer: 2,
-  },
-  {
-    question: "Сколько у человека пальцев на одной руке?",
-    options: ["1. Четыре", "2. Пять", "3. Шесть"],
-    correctAnswer: 2,
-  },
-];
+  const quiz = [
+    {
+      question: "Какой цвет небо?",
+      options: ["1. Красный", "2. Синий", "3. Зеленый"],
+      correctAnswer: 2,
+    },
+    {
+      question: "Сколько дней в неделе?",
+      options: ["1. Шесть", "2. Семь", "3. Восемь"],
+      correctAnswer: 2,
+    },
+    {
+      question: "Сколько у человека пальцев на одной руке?",
+      options: ["1. Четыре", "2. Пять", "3. Шесть"],
+      correctAnswer: 2,
+    },
+  ];
 
-let score = 0;
-quiz.forEach((item) => {
-  const userAnswer = prompt(`${item.question}\n${item.options.join("\n")}`);
+  let score = 0;
+  quiz.forEach((item) => {
+    const userAnswer = prompt(`${item.question}\n${item.options.join("\n")}`);
 
-  if (parseInt(userAnswer) === item.correctAnswer) {
-    score++; 
+    if (parseInt(userAnswer) === item.correctAnswer) {
+      score++;
+    }
+  });
+
+  alert(`Вы ответили правильно на ${score} вопрос(ов) из ${quiz.length}.`);
+}
+
+function playgame5() {
+  function getComputerChoice() {
+    const choices = ["камень", "ножницы", "бумага"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
   }
-});
 
+  function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+      return "Ничья!";
+    } else if (
+      (userChoice === "камень" && computerChoice === "ножницы") ||
+      (userChoice === "ножницы" && computerChoice === "бумага") ||
+      (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+      return "Вы победили!";
+    } else {
+      return "Вы проиграли!";
+    }
+  }
 
-alert(`Вы ответили правильно на ${score} вопрос(ов) из ${quiz.length}.`);
+  let userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
 
+  while (
+    userChoice !== "камень" &&
+    userChoice !== "ножницы" &&
+    userChoice !== "бумага"
+  ) {
+    userChoice = prompt(
+      "Неверный ввод. Выберите: камень, ножницы или бумага"
+    ).toLowerCase();
+  }
 
+  const computerChoice = getComputerChoice();
+
+  const result = determineWinner(userChoice, computerChoice);
+
+  alert(
+    `Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${result}`
+  );
+}
+
+function playgame6() {
+  
 }

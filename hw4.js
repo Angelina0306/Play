@@ -32,8 +32,9 @@
 // const arr = [1, 1, 1];
 // arr.push(2, 2, 2);
 
-// const arr = [9, 8, 7, "a", 6, 5];
+// let arr = [9, 8, 7, "a", 6, 5];
 // arr.sort();
+// arr = arr.filter((item) => typeof item === "number");
 // console.log(arr);
 
 // let array = [9, 8, 7, 6, 5];
@@ -68,7 +69,7 @@
 // }
 
 // function q(arr) {
-// return arr.map(item => item **2);    
+// return arr.map(item => item **2);
 // }
 // console.log(q([1, 2, 3]));
 
@@ -80,8 +81,7 @@
 // function negative(arr) {
 //   return arr.filter(item => item < 0);
 // }
-//   console.log(negative([1, -3, 4, -7, 8])) ; 
-
+//   console.log(negative([1, -3, 4, -7, 8])) ;
 
 // const originalArray = [];
 // for (let i = 0; i < 10; i++) {
@@ -96,7 +96,6 @@
 //   }
 // }
 // console.log("Массив с чётными значениями:", evenValuesArray);
-
 
 // const numbersArray = [];
 // for (let i = 0; i < 6; i++) {

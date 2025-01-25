@@ -20,18 +20,15 @@ function playgame() {
 }
 
 function playgame2() {
-  // Функция для генерации случайного числа в заданном диапазоне
   function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  // Функция для генерации случайной арифметической задачи
   function generateMathProblem() {
     const operators = ["+", "-", "*", "/"];
     const operator = operators[getRandomNumber(0, operators.length - 1)];
     let num1, num2;
 
-    // Генерация чисел в зависимости от оператора
     if (operator === "+") {
       num1 = getRandomNumber(1, 100);
       num2 = getRandomNumber(1, 100);
@@ -49,7 +46,6 @@ function playgame2() {
     return { num1, num2, operator };
   }
 
-  // Функция для вычисления правильного ответа
   function calculateAnswer(num1, num2, operator) {
     switch (operator) {
       case "+":
@@ -65,7 +61,6 @@ function playgame2() {
     }
   }
 
-  // Основная функция для запуска программы
   function startMathQuiz() {
     const problem = generateMathProblem();
     const { num1, num2, operator } = problem;
@@ -94,4 +89,37 @@ function playgame3() {
 
   console.log("Перевёрнутый текст: " + reverseString(userText));
 }
-function playgame4() {}
+function playgame4() {
+ 
+const quiz = [
+  {
+    question: "Какой цвет небо?",
+    options: ["1. Красный", "2. Синий", "3. Зеленый"],
+    correctAnswer: 2, 
+  },
+  {
+    question: "Сколько дней в неделе?",
+    options: ["1. Шесть", "2. Семь", "3. Восемь"],
+    correctAnswer: 2,
+  },
+  {
+    question: "Сколько у человека пальцев на одной руке?",
+    options: ["1. Четыре", "2. Пять", "3. Шесть"],
+    correctAnswer: 2,
+  },
+];
+
+let score = 0;
+quiz.forEach((item) => {
+  const userAnswer = prompt(`${item.question}\n${item.options.join("\n")}`);
+
+  if (parseInt(userAnswer) === item.correctAnswer) {
+    score++; 
+  }
+});
+
+
+alert(`Вы ответили правильно на ${score} вопрос(ов) из ${quiz.length}.`);
+
+
+}

@@ -1,7 +1,7 @@
 function getRandomInt(min, max) {
-  min = Math.ceil(min); // округляем до ближайшего большего целого
-  max = Math.floor(max); // округляем до ближайшего меньшего целого
-  return Math.floor(Math.random() * (max - min + 1)) + min; // генерируем случайное целое число
+  min = Math.ceil(min); 
+  max = Math.floor(max); 
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
 function playgame() {
@@ -87,7 +87,7 @@ function playgame3() {
 
   let userText = prompt("Введите текст");
 
-  console.log("Перевёрнутый текст: " + reverseString(userText));
+  alert("Перевёрнутый текст: " + reverseString(userText));
 }
 function playgame4() {
  

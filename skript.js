@@ -87,7 +87,7 @@ function playgame3() {
 
   let userText = prompt("Введите текст");
 
-  console.log("Перевёрнутый текст: " + reverseString(userText));
+  alert("Перевёрнутый текст: " + reverseString(userText));
 }
 function playgame4() {
   const quiz = [

@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,15 +13,17 @@
     <button class="button1">Изменить цвет</button>
     <h2>Исходный текст</h2>
     <button class="button2">Изменить текст</button>
-    <div class="description">Исходный текст 1</div>
-<div class="description">Исходный текст 2</div>
-<p>Обычный текст 1.</p>
-<p class="description">Исходный текст 1</p>
-<p>Обычный текст 2.</p>
-<p class="description">Исходный текст 2</p>
-<button class="button">Добавить элемент</button>
-<button class="button">Удалить элемент</button>
-<p class="description">Первый абзац с классом description.</p>
+    <div class="description5">Исходный текст 1</div>
+    <div class="description5">Исходный текст 2</div>
+    <p>Обычный текст 1.</p>
+    <p class="description6">Исходный текст 1</p>
+    <p>Обычный текст 2.</p>
+    <p class="description6">Исходный текст 2</p>
+    <button class="button__add">Добавить элемент</button>
+    <button class="button_delete">Удалить элемент</button>
+    <p class="description">Первый абзац с классом description.</p>
+    <p class="description">Первый абзац с классом description.</p>
+    <p class="description">Первый абзац с классом description.</p>
   </body>
 </html>
 
@@ -47,37 +49,34 @@
   const header1 = document.querySelector("h2");
   const button2 = document.querySelector(".button2");
 
-  
   button2.addEventListener("click", function () {
     header1.textContent = "Привет, друг!";
   });
-const descriptions = document.querySelectorAll(".description");
+  const descriptions1 = document.querySelectorAll(".description5");
 
-descriptions.forEach(function(description) {
-    description.textContent = "Изменённый текст";
-});
+  descriptions1.forEach(function (description5) {
+    description5.textContent = "Изменённый текст";
+  });
 
-const descriptions = document.querySelectorAll(".description");
+  const descriptions2 = document.querySelectorAll(".description6");
 
-descriptions.forEach(function(description) {
-   
-    description.textContent = "Новый текст";
-});
+  descriptions2.forEach(function (description6) {
+    description6.textContent = "Новый текст";
+  });
 
-const button = document.querySelector(".button");
+  const button_add = document.querySelector(".button__add");
 
-button.addEventListener("click", function() {
+  button_add.addEventListener("click", function () {
     const paragraph = document.createElement("p");
+    paragraph.className = "description";
     paragraph.textContent = "Новый абзац";
 
     document.body.appendChild(paragraph);
-});
-const button = document.querySelector(".button");
-const description = document.querySelector(`.description`);
+  });
+  const button_delete = document.querySelector(".button_delete");
 
-button.addEventListener("click", function() {
-
+  button_delete.addEventListener("click", function () {
+    const description = document.querySelector(`.description`);
     description.remove();
-});
-
-</script> -->
+  });
+</script>

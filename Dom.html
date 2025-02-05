@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc</title>
+    <link rel="stylesheet" href="./hw7.js" />
+  </head>
+  <body>
+    <h1>Я здесь</h1>
+    <button class="button">Уйди</button>
+    <p>Не крась меня!</p>
+    <button class="button1">Изменить цвет</button>
+    <h2>Исходный текст</h2>
+    <button class="button2">Изменить текст</button>
+    <div class="description5">Исходный текст 1</div>
+    <div class="description5">Исходный текст 2</div>
+    <p>Обычный текст 1.</p>
+    <p class="description6">Исходный текст 1</p>
+    <p>Обычный текст 2.</p>
+    <p class="description6">Исходный текст 2</p>
+    <button class="button__add">Добавить элемент</button>
+    <button class="button_delete">Удалить элемент</button>
+    <p class="description">Первый абзац с классом description.</p>
+    <p class="description">Первый абзац с классом description.</p>
+    <p class="description">Первый абзац с классом description.</p>
+  </body>
+</html>
+
+<script>
+  const header = document.querySelector("h1");
+  const button = document.querySelector(".button");
+
+  button.addEventListener("click", function () {
+    if (header.style.display === "none") {
+      header.style.display = "block";
+    } else {
+      header.style.display = "none";
+    }
+  });
+
+  const paragraph = document.querySelector("p");
+  const button1 = document.querySelector(".button1");
+
+  button1.addEventListener("click", function () {
+    paragraph.style.color = "blue";
+  });
+
+  const header1 = document.querySelector("h2");
+  const button2 = document.querySelector(".button2");
+
+  button2.addEventListener("click", function () {
+    header1.textContent = "Привет, друг!";
+  });
+  const descriptions1 = document.querySelectorAll(".description5");
+
+  descriptions1.forEach(function (description5) {
+    description5.textContent = "Изменённый текст";
+  });
+
+  const descriptions2 = document.querySelectorAll(".description6");
+
+  descriptions2.forEach(function (description6) {
+    description6.textContent = "Новый текст";
+  });
+
+  const button_add = document.querySelector(".button__add");
+
+  button_add.addEventListener("click", function () {
+    const paragraph = document.createElement("p");
+    paragraph.className = "description";
+    paragraph.textContent = "Новый абзац";
+
+    document.body.appendChild(paragraph);
+  });
+  const button_delete = document.querySelector(".button_delete");
+
+  button_delete.addEventListener("click", function () {
+    const description = document.querySelector(`.description`);
+    description.remove();
+  });
+</script>

@@ -1,65 +1,85 @@
-// const people = [
-//    { name: 'Глеб', age: 29 },
-//    { name: 'Анна', age: 17 },
-//    { name: 'Олег', age: 7 },
-//    { name: 'Оксана', age: 47 }
-// ];
-// console.log(people.sort((a, b) => b.age - a.age));
-// function filter(array, ruleFunction) {
-//     const result = [];
-//     for (let i = 0; i < array.length; i++) {
-//         if (ruleFunction(array[i])){
-//             result.push(array[i]);
-//         }
-        
-//     }
-//     return result;
-// }
-// function isPositive() {
-//   return num > 0;
-// }
-// function isMale() {
-//  return personalbar.gender === 'male';
-// }
+const people = [
+  { name: "Глеб", age: 29 },
+  { name: "Анна", age: 17 },
+  { name: "Олег", age: 7 },
+  { name: "Оксана", age: 47 },
+];
 
-// console.log(filter([3, -4, 1, 9], isPositive));
+console.log(
+  people.sort((a, b) => {
+    if (a.age < b.age) {
+      return -1; 
+    } else if (a.age > b.age) {
+      return 1; 
+    } else {
+      return 0; 
+    }
+  })
+);
 
-// const people = [
-//   { name: "Глеб", gender: "male" },
-//   { name: "Анна", gender: "female" },
-//   { name: "Олег", gender: "male" },
-//   { name: "Оксана", gender: "female" },
-// ];
+function isPositive(num) {
+  return num > 0;
+}
+function isMale(person) {
+  return person.gender === "male";
+}
 
-// console.log(filter(people, isMale));
+function filter(arr, ruleFunction) {
+  const result = [];
 
-// const intervalid = setInterval(() => {
-//     console.log('Добрый вечер');
-// }, 3000);
+  for (let i = 0; i < arr.length; i++) {
+    if (ruleFunction(arr[i])) {
+      result.push(arr[i]);
+    }
+  }
 
-// setInterval (() => {
-//     clearInterval(intervalid);
-//     console.log ('Закончилось время')
-// }, 7000);
+  return result;
+}
 
-// function delayForSecond(callback) {
-//     setTimeout(callback, 2000);
-// }
+console.log(filter([3, -4, 1, 9], isPositive));
 
-// delayForSecond(function() {
-//     console.log('Hello, Angelina')
-// })
+const people1 = [
+  { name: "Глеб", gender: "male" },
+  { name: "Анна", gender: "female" },
+  { name: "Олег", gender: "male" },
+  { name: "Оксана", gender: "female" },
+];
 
-// function delayForSecond(cb) {
-//   setTimeout(() => {
-//     console.log("Прошла одна секунда");
-//     if (cb) {
-//       cb();
-//     }
-//   }, 1000);
-// }
-// function sayHi(name) {
-//   console.log(`Привет, ${name}`);
-// }
+console.log(filter(people1, isMale));
 
-// delayForSecond(() => sayHi('Глеб'));
+let intervalId;
+let timeoutId;
+
+function printCurrentDate() {
+  const currentDate = new Date();
+  console.log(currentDate);
+}
+
+intervalId = setInterval(printCurrentDate, 3000);
+
+timeoutId = setTimeout(() => {
+  clearInterval(intervalId);
+  console.log("30 секунд прошло");
+}, 30000);
+
+function delayForSecond(callback) {
+  setTimeout(callback, 2000);
+}
+
+delayForSecond(function () {
+  console.log("Hello, Angelina");
+});
+
+function delayForSecond(cb) {
+  setTimeout(() => {
+    console.log("Прошла одна секунда");
+    if (cb) {
+      cb();
+    }
+  }, 1000);
+}
+function sayHi(name) {
+  console.log(`Привет, ${name}`);
+}
+
+delayForSecond(() => sayHi('Глеб'));

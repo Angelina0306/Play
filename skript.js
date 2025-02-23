@@ -162,18 +162,8 @@ function playgame5() {
   );
 }
 
-// function playgame6() {
-//   const button1 = document.querySelector(".play__btn");
-
-//   button1.addEventListener("click", function () {
-//     function getRandomColor() {
-//       var letters = "0123456789ABCDEF";
-//       var color = "#";
-//       for (var i = 0; i < 6; i++) {
-//         color += letters[Math.floor(Math.random() * 16)];
-//       }
-//       return color;
-//     }
-//     document.body.style.backgroundColor = getRandomColor();
-//   });
-// }
+function playgame6() {
+  const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  const miniGamesElement = document.querySelector(".play");
+  miniGamesElement.style.backgroundColor = randomColor;
+}

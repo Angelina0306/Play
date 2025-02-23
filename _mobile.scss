@@ -157,6 +157,20 @@
   }
 }
 @media (max-width: 525px) {
+  .play {
+    width: 343px;
+    &__img {
+      height: 285px;
+    }
+    &__h2 {
+      font-size: 32px;
+      line-height: 39px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
   .header {
     padding-top: 147px;
     background-image: url(./img/small_star.svg), url(./img/Star_3.svg),

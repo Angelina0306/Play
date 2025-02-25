@@ -15,6 +15,7 @@ body {
 }
 
 .header {
+  overflow: hidden;
   width: 100%;
   padding-top: 196px;
   background-color: rgb(225, 255, 143);
@@ -120,17 +121,33 @@ body {
 
 .marquee {
   display: flex;
+  overflow: hidden;
   align-items: center;
   background-color: rgb(188, 236, 48);
-  width: 100%;
+  width: 3225px;
   height: 90px;
 }
 
 .roll {
+  animation: roll-animation 30s infinite linear;
   display: flex;
   gap: 51px;
   align-items: start;
   justify-content: center;
+}
+
+@keyframes roll-animation {
+  0% {
+    transform: translate(0%, 0);
+  }
+  99% {
+    opacity: 1;
+    transform: translate(-100%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100%, 0);
+  }
 }
 
 .roll__text {
@@ -208,7 +225,9 @@ body {
   text-align: left;
   border: none;
   padding: 8px 16px;
-  border-radius: 52px;
+  border-radius: 52.58px;
+  background: rgb(247, 247, 247);
+  text-decoration: none !important;
 }
 
 .cart__h2 {
@@ -216,11 +235,15 @@ body {
   font-family: Montserrat;
   font-size: 32px;
   font-weight: 700;
-
+  text-decoration: none;
   line-height: 39px;
   letter-spacing: 0px;
   text-align: left;
   max-width: 312px;
+}
+
+.cart__item {
+  text-decoration: none;
 }
 
 .cart {
@@ -333,6 +356,7 @@ body {
 
 .play__img {
   width: 100%;
+  max-width: 600px;
   height: 500px;
 }
 
@@ -370,7 +394,7 @@ body {
   border-radius: 60px;
   background-color: none;
   background: rgb(32, 32, 39);
-  padding: 16px 28px;
+  padding: 16px 75.5px;
 }
 
 .footer {
